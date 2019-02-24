@@ -1,0 +1,16 @@
+{% extends 'pizzeriaApp/base.html' %}
+
+{% block title %}
+    <b>Pizzas</b>
+{% endblock title %}
+
+{% block content %}
+    <ul>
+        {% for pizza in pizzas %}
+            <li>
+                <a href="toppings/{{ pizza.id }}">{{ pizza }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
